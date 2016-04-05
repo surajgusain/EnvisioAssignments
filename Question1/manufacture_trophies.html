@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+Question 1 :
+You work in an organisation that manufactures trophies. A trophy will have a definite shape, will be made
+of a definite metal, and will have a coating layer over it by some specific element. Once a customer
+comes to your office to place an order, you need to ask for the relevant details, in order to build the exact
+trophy as per the requirement.
+Details you need from a customer are:
+1. The shape, and its dimensions. The possible shapes are Sphere, Cylinder, Cube or something abstract
+which you can consider to be a cuboid.
+2. The metal to be used to built the trophy, and its purity percentage. The possible metals are Aluminium,
+Steel or Copper.
+3. The element to be used for the coating layer, and its thickness. The possible elements are Gold, Silver
+or Bronze.
+The metals and the coating elements have a fixed price in your organization.
+Write an object oriented program with design pattern, to take the relevant details of the trophy from the
+user and calculate the cost for the trophy, assuming your organization does not take any making charges.
+You will need to create UI of the application, preferably responsive.
+ -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manufacture Trophies</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <h2><p class="text-center">Trophy Manufacturer info. form </p></h2>
+
+    <div class="container">
+
+      <form id = "form_trophy" method="post" action="calculate.php" role="form">
+
+        <div class="form-group">
+          Select Metal shape -
+          <select name="trophy_shape" class="form-control">
+            <option value="">Select</option>
+            <option value="sphere">Sphere</option>
+            <option value="cylinder">Cylinder</option>
+            <option value="cube">Cube</option>
+            <option value="cuboid">Cuboid</option>
+          </select>
+          <br />
+        </div>
+
+        <div class="form-group">
+          Enter trophy dimensions - <br />
+          <input type="text" name="trophy_radius" class="form-control" placeholder="Enter trophy radius" /><br/>
+          <input type="text" name="trophy_height" class="form-control" placeholder="Enter trophy height" /><br/>
+        </div>
+
+        <div class="form-group">
+          Select Metal information -
+          <select name="trophy_metal" class="form-control">
+            <option value="">Select</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+          <br />
+
+          Enter purity percentage - <br />
+          <input type="text" name="purity_percentage" class="form-control" placeholder="Enter purity percentage"/><br/>
+          <input type="text" name="trophy_height" class="form-control" placeholder="Enter trophy height"/><br/>
+          <br />
+        </div>
+
+        <div class="form-group">
+
+          Enter coating details - <br />
+          Select Coating material information -
+          <select name="coating_metal" class="form-control">
+            <option value="">Select</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+          <br />
+
+          <input type="text" name="coating_thickness" class="form-control" placeholder="Enter coating thickness"/><br/>
+          <br />
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
